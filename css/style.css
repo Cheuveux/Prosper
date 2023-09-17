@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,8 @@
 
 
     /* POLICE */
-    --FF:'Slabo 27px',serif;
+    --FF:'IBM Plex Mono', monospace;
+    --FS: 15px;
 
 
     /*MOSAIQUE STYLE */
@@ -24,8 +24,8 @@
 }
 
 html {
-    font-size: 1.5rem;
-    font-family: 'Slabo 27px',serif ;
+    font-size: var(--FS);
+    font-family: var(--FF) ;
     background-color: var(--MAINBGCOLOR);
 }
 
@@ -36,71 +36,44 @@ body{
   header {
     background-color: var(--HDRBGCOLOR);
     color: var(--HDRCOLOR);
-   padding: 0.5rem;
+   
+ padding: 0.5rem;
    width: 100%;
-   justify-content: right;
+   justify-content: left;
     
    display: flex;
-    position: sticky;
+    position: absolute;
     top: 0px;
-
-    
-
-/*   background-image: url(../photos/1908x1272-bghdr.JPG);
-    background-size: cover;    */
-}
+ }
 
 
 .header-title-line {
     display: flex;
     padding-right: 0.5em;
     
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 
-
-:is(header:hover, header:focus-within) nav {
-    display: flex;
-}
 
 nav {
-    background-color: transparent;
-    display: none;
-    transform-origin: top center;
-    animation: showMenu 0.5s ease-in-out forwards;
-  
+    font-size: 1.5rem;
 }
 
-@keyframes showMenu {
-    0% {
-        transform: scaleY(0);
-    }
-
-    80% {
-        transform: scaleY(1.2);
-    }
-
-    100% {
-        transform: scaleY(1);
-    }
-}
 
 nav ul {
     list-style-type: none;
-    display: block;
+    display: flex;
+    flex-direction: row nowrap;
     
     margin-top: 2rem;
-    justify-content: right;
+    position: absolute;
+    right: 0;
 }
 
 nav li {
-    padding: 1rem;
-    text-shadow: 2px 2px 5px #000 ;
-}
-
-nav li:last-child {
-    border-top: 5px solid rgb(68, 65, 65);
+    padding: 0.25rem;
+   
 }
 
 nav a {
