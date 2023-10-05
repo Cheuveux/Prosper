@@ -43,13 +43,13 @@ body, html{
 .content .text:before{
   left: 3px;
   text-shadow: -2px;
-  animation: glitch-1 2s infinite reverse;
+  animation: glitch-1 2s;
 }
 
 .content .text:after{
   left: -3px;
   text-shadow: -2px 0 rgb(12, 12, 27);
-  animation: glitch-2 2s linear infinite reverse;
+  animation: glitch-2 2s linear;
 
 }
 
