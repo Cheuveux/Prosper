@@ -17,49 +17,68 @@
     
     <nav>
         <ul class="menu">
-            <li><a class="text" href="collection.html" data-text=' Collections'> Collections</a></li>
+            <li><a class="text" href="collections.html" data-text=' Collections'> Collections</a></li>
             <li><a class="text" href="aléatoire.html"  data-text=' Sélection Aléatoire'> Sélection Aléatoire</a></li>
         </ul>
 </header>
 
     <main class="mosaique">
     <div class="image-container">
-        <img class="c1-r1" src="photos/4600x3600.jpg" alt="" >
-        <img class="c2-r1"src="photos/2400x3600-a.jpg" alt="" >
-        <img class="c3-r1" src="photos/2400x3600-c.jpg" alt="" >
-        <img class="c1-r2"src="photos/2400x3600.jpg" alt="" >
-        <img  class="c2-r2"src="photos/1908x1272-a.JPG" alt="" >
-        <img class="c3-r2"src="photos/1272x1908.JPG" alt="" >
-        <img class="c1-r3" src="photos/1908x1272-b.JPG" alt="" >
-        <img class="c2-r3"src="photos/2075x3130.JPG" alt="" >
-        <img class="c3-r3"src="photos/3130x2075.JPG" alt="" >
-        <img  class="c1-r4" src="photos/1908x1272.JPG" alt="" >
-        <img class="c1-r5" src="photos/2075x3130-b.JPG" alt="" >
-        <img class="c2-r5" src="photos/3130x2075-a.JPG" alt="" >
-        <img src="photos/4000x6000.jpg" alt="" >
-        <img src="photos/1272x1908-b.JPG" alt="">
-        <img src="photos/5800x2500.jpg" alt="" >
+        <img class="c1-r1 paysage" src="photos/4600x3600.jpg" alt="" >
+        <img class="c2-r1 portrait"src="photos/2400x3600-a.jpg" alt="" >
+        <img class="c3-r1 portrait" src="photos/2400x3600-c.jpg" alt="" >
+        <img class="c1-r2 portrait"src="photos/2400x3600.jpg" alt="" >
+        <img  class="c2-r2 paysage"src="photos/1908x1272-a.JPG" alt="" >
+        <img class="c3-r2 portrait"src="photos/1272x1908.JPG" alt="" >
+        <img class="c1-r3 paysage" src="photos/1908x1272-b.JPG" alt="" >
+        <img class="c2-r3 portrait"src="photos/2075x3130.JPG" alt="" >
+        <img class="c3-r3 paysage"src="photos/3130x2075.JPG" alt="" >
+        <img  class="c1-r4 paysage" src="photos/1908x1272.JPG" alt="" >
+        <img class="c1-r5 portrait" src="photos/2075x3130-b.JPG" alt="" >
+        <img class="c2-r5 paysage" src="photos/3130x2075-a.JPG" alt="" >
+        <img class="portrait" src="photos/4000x6000.jpg" alt="" >
+        <img  class="portrait" src="photos/1272x1908-b.JPG" alt="">
+        <img  class="paysage"src="photos/5800x2500.jpg" alt="" >
 
     </div>
 
 
-    <div class="popup-image">
+    <div class="popup-paysage">
         <span>&times;</span>
-        <img src="photos/1908x1272-a.JPG" alt="" width="1908" height="1272">
+        <img class="c2-r2 paysage" src="photos/1908x1272-a.JPG" alt="" width="1908" height="1272">
     </div> 
 
-</section>
+    <div class="popup-portrait">
+        <span>&times;</span>
+        <img src="photos/2400x3600-a.jpg"  alt="" width="2400" height="3600">
+    </div> 
 
+
+<!-- SCRIPT JS POUR PAYSAGE POPUP -->
 <script>
-    document.querySelectorAll('.image-container img').forEach(image =>{
+    document.querySelectorAll('img.paysage').forEach(image=>{
         image.onclick = () =>{
-            document.querySelector('.popup-image').style.display='block';
-            document.querySelector('.popup-image img').src= image.getAttribute('src');
+            document.querySelector('.popup-paysage').style.display='block';
+            document.querySelector('.popup-paysage img').src= image.getAttribute('src');
         }  
         });
      
-    document.querySelector('.popup-image span').onclick =() => {
-        document.querySelector('.popup-image').style.display='none';
+    document.querySelector('.popup-paysage span').onclick =() => {
+        document.querySelector('.popup-paysage').style.display='none';
+    }
+</script>
+
+<!-- SCRIPT JS POUR PORTRAIT POPUP -->
+<script>
+    document.querySelectorAll('img.portrait').forEach(image=>{
+        image.onclick = () =>{
+            document.querySelector('.popup-portrait').style.display='block';
+            document.querySelector('.popup-portrait img').src= image.getAttribute('src');
+        }  
+        });
+     
+    document.querySelector('.popup-portrait span').onclick =() => {
+        document.querySelector('.popup-portrait').style.display='none';
     }
 </script>
    </main>
