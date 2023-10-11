@@ -217,7 +217,7 @@ header {
   align-content: left;
 
   gap: 10px;
-  border: solid 3px grey;
+  border: solid 1px lightblue;
  
 }
 .titre {
@@ -228,9 +228,9 @@ header {
   box-shadow: 10px 5px 5px #00000051;
   letter-spacing: 1px;
 
-  box-sizing: ;
- border-top: solid grey;
- border-bottom: solid grey;
+  box-sizing: border-box;
+ border-top: 1px solid lightblue;
+ border-bottom: 1px solid lightblue;
 }
 
 .sommaire {
@@ -240,6 +240,8 @@ header {
 
   align-items: left;
   align-content: left;
+  margin-left: 10px;
 
   list-style-type: none;
+  
 }
