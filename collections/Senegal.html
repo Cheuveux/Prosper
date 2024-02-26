@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Senegal.css">
+    <title>Senegal</title>
+</head>
+<body>
+
+    <div class="gallerie-wrap">
+        <img src="left-arrow.png" id="Boutonretour">
+
+        <div class="gallerie">
+            <div>
+    
+            <span class="portrait"> <img src="photos/2075x3130-b.JPG" onclick="Display(this)"></span>
+            <span class="portrait"><img src="photos/2075x3130.JPG" onclick="Display(this)"></span>
+            <span class="paysage"><img src="photos/3130x2075-a.JPG" onclick="Display(this)"></span>
+            <span class="paysage"><img src="photos/3130x2075.JPG" onclick="Display(this)"></span>
+            <span class="paysage"><img src="photos/3130x2075.JPG" onclick="Display(this)"></span>
+            <span class="paysage"><img src="photos/3130x2075.JPG" onclick="Display(this)"></span>
+            </div>
+        </div>
+        <img src="right-arrow (1).png" id="Boutonsuivant">
+    </div>
+    
+
+  <!--   <div class="image-container">
+          <figure>
+            <img src="photos/2075x3130-b.JPG" id="imageBox">
+            <figcaption><h2>Ref: P-07-78</h2></figcaption>
+          </figure>
+s
+    </div>
+ -->
+   <script>
+    function Display (smallImg) {
+        var fullImg= document.getElementById("imageBox")
+        fullImg.src= smallImg.src
+
+    }
+   </script> 
+
+</body>
+</html>

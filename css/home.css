@@ -1,34 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 * {
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
 }
 
 :root {
-    /* COULEUR */
-    --HDRBGCOLOR: #000;
-    --HDRCOLOR: #9d0208;
-    --MAINBGCOLOR: #000;
+  /* COULEUR */
+  --HDRCOLOR: #111;
+  --HDRCOLOR: #9d0208;
+  --MAINBGCOLOR:#111;
 
 
-    /* POLICE */
-    --FF:'IBM Plex Mono', monospace;
-    --FS: 15px;
-
-
-    /*MOSAIQUE STYLE */
-    --GAP:20px;
-    --NB-COLONNES: 12;
-    --ROW-HEIGHT:200px;
-
+  /* POLICE */
+  --FF:'IBM Plex Mono', monospace;
+  --FS: 15px;
 }
 
 html {
     font-size: var(--FS);
     font-family: var(--FF) ;
     background-color: var(--MAINBGCOLOR);
-
+ 
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -39,24 +31,22 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-
-
-header{
-  
-position: sticky;
-height: 8rem;
- background-color: var(--HDRBGCOLOR);
- margin: 5px;
-  
- display: flex;
-flex-flow: column;
-
+header {
+  position: sticky;
+   width: 100%;
+   display: flex;
+   flex-flow: row wrap;
+   margin: auto;
 }
+
+
+
 
 .prosper-titre {
   font-size: 3rem;
   margin-top: 0.5em;
-  margin-left: 1em;
+  margin-left: 0.5em;
+  margin-bottom: 0;
 
   display: flex;
   justify-content: left;
@@ -65,13 +55,32 @@ flex-flow: column;
 
 
   position: sticky;
-  top: 10px;
-  left: 10px;
    color: var(--HDRCOLOR);
 }
 
-nav {
-    top: 0px;
+
+.logo-container {
+    position: relative;
+    left: 15px;
+    bottom: 10px;
+    width: auto;
+    height: 8.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container img {
+ height: 100%;
+ width: 100%;
+  object-fit: fill;
+}
+
+
+
+  .menu  {
+    bottom: 0px;
+    
     width: 100%;
     height: 100%;
 
@@ -79,18 +88,14 @@ nav {
   justify-content: right;
   align-items: right;
 
- }
-
- nav .menu  {
   display: flex inline;
   list-style-type: none;
-  margin-right: 20px;
-  padding: 0;
+  margin-right: 50px;
 
   gap: 4em;
  }
 
-
+ 
  
 
  .menu .text{
@@ -118,310 +123,448 @@ nav {
   background-color: var(--HDRBGCOLOR);
   overflow: hidden;
   top: 0;
+  left: 0;
 
 }
 
 .menu .text:hover:before{
+  display: inline;
   left: 5px;
   text-shadow: -2px;
   animation: glitch-1 2s infinite reverse;
 }
 
 .menu .text:hover::after{
+  display: inline;
   left: -5px;
   text-shadow: -2px 0 green;
   animation: glitch-2 2s linear infinite reverse;
 
+}@keyframes glitch-1 {
+    0% {
+      clip: rect(132px, auto, 101px, 5px);
+    }
+    5% {
+      clip: rect(17px, auto, 94px, 5px);
+    }
+    10% {
+      clip: rect(40px, auto, 66px, 5px);
+    }
+    15% {
+      clip: rect(87px, auto, 82px, 5px);
+    }
+    20% {
+      clip: rect(137px, auto, 61px, 5px);
+    }
+    25% {
+      clip: rect(34px, auto, 14px, 5px);
+    }
+    30% {
+      clip: rect(133px, auto, 74px, 5px);
+    }
+    35% {
+      clip: rect(76px, auto, 107px, 5px);
+    }
+    40% {
+      clip: rect(59px, auto, 130px, 5px);
+    }
+    45% {
+      clip: rect(29px, auto, 84px, 5px);
+    }
+    50% {
+      clip: rect(22px, auto, 67px, 5px);
+    }
+    55% {
+      clip: rect(67px, auto, 62px, 5px);
+    }
+    60% {
+      clip: rect(10px, auto, 105px, 5px);
+    }
+    65% {
+      clip: rect(78px, auto, 115px, 5px);
+    }
+    70% {
+      clip: rect(105px, auto, 13px, 5px);
+    }
+    75% {
+      clip: rect(15px, auto, 75px, 5px);
+    }
+    80% {
+      clip: rect(66px, auto, 39px, 5px);
+    }
+    85% {
+      clip: rect(133px, auto, 73px, 5px);
+    }
+    90% {
+      clip: rect(36px, auto, 128px, 5px);
+    }
+    95% {
+      clip: rect(68px, auto, 103px, 5px);
+    }
+    100% {
+      clip: rect(14px, auto, 100px, 5px);
+    }
+    }
+    
+@keyframes glitch-2 {
+    0% {
+    clip: rect(129px, auto, 36px, 5px);
+        }
+    5% {
+clip: rect(36px, auto, 4px, 5px);
+}
+10% {
+clip: rect(85px, auto, 66px, 5px);
+}
+15% {
+clip: rect(91px, auto, 91px, 5px);
+}
+20% {
+clip: rect(148px, auto, 138px, 5px);
+}
+25% {
+clip: rect(38px, auto, 122px, 5px);
+}
+30% {
+clip: rect(69px, auto, 54px, 5px);
+}
+35% {
+clip: rect(98px, auto, 71px, 5px);
+}
+40% {
+clip: rect(146px, auto, 34px, 5px);
+}
+45% {
+clip: rect(134px, auto, 43px, 5px);
+}
+50% {
+clip: rect(102px, auto, 80px, 5px);
+}
+55% {
+clip: rect(119px, auto, 44px, 5px);
+}
+60% {
+clip: rect(106px, auto, 99px, 5px);
+}
+65% {
+clip: rect(141px, auto, 74px, 5px);
+}
+70% {
+clip: rect(20px, auto, 78px, 5px);
+}
+75% {
+clip: rect(133px, auto, 79px, 5px);
+}
+80% {
+clip: rect(78px, auto, 52px, 5px);
+}
+85% {
+clip: rect(35px, auto, 39px, 5px);
+}
+90% {
+clip: rect(67px, auto, 70px, 5px);
+}
+95% {
+clip: rect(71px, auto, 103px, 5px);
+}
+100% {
+clip: rect(83px, auto, 40px, 5px);
+}
 }
 
+
+
+.mosaique {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+
+.column {
+    -ms-flexbox: 20%;
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 4px;
+}
+
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+  }
 
   
+.mosaique .column img {
+    cursor: pointer;
+  }
+  
+  .image-container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-@keyframes glitch-1 {
-0% {
-  clip: rect(132px, auto, 101px, 5px);
-}
-5% {
-  clip: rect(17px, auto, 94px, 5px);
-}
-10% {
-  clip: rect(40px, auto, 66px, 5px);
-}
-15% {
-  clip: rect(87px, auto, 82px, 5px);
-}
-20% {
-  clip: rect(137px, auto, 61px, 5px);
-}
-25% {
-  clip: rect(34px, auto, 14px, 5px);
-}
-30% {
-  clip: rect(133px, auto, 74px, 5px);
-}
-35% {
-  clip: rect(76px, auto, 107px, 5px);
-}
-40% {
-  clip: rect(59px, auto, 130px, 5px);
-}
-45% {
-  clip: rect(29px, auto, 84px, 5px);
-}
-50% {
-  clip: rect(22px, auto, 67px, 5px);
-}
-55% {
-  clip: rect(67px, auto, 62px, 5px);
-}
-60% {
-  clip: rect(10px, auto, 105px, 5px);
-}
-65% {
-  clip: rect(78px, auto, 115px, 5px);
-}
-70% {
-  clip: rect(105px, auto, 13px, 5px);
-}
-75% {
-  clip: rect(15px, auto, 75px, 5px);
-}
-80% {
-  clip: rect(66px, auto, 39px, 5px);
-}
-85% {
-  clip: rect(133px, auto, 73px, 5px);
-}
-90% {
-  clip: rect(36px, auto, 128px, 5px);
-}
-95% {
-  clip: rect(68px, auto, 103px, 5px);
-}
-100% {
-  clip: rect(14px, auto, 100px, 5px);
-}
-}
 
-@keyframes glitch-2 {
-0% {
-  clip: rect(129px, auto, 36px, 5px);
-}
-5% {
-  clip: rect(36px, auto, 4px, 5px);
-}
-10% {
-  clip: rect(85px, auto, 66px, 5px);
-}
-15% {
-  clip: rect(91px, auto, 91px, 5px);
-}
-20% {
-  clip: rect(148px, auto, 138px, 5px);
-}
-25% {
-  clip: rect(38px, auto, 122px, 5px);
-}
-30% {
-  clip: rect(69px, auto, 54px, 5px);
-}
-35% {
-  clip: rect(98px, auto, 71px, 5px);
-}
-40% {
-  clip: rect(146px, auto, 34px, 5px);
-}
-45% {
-  clip: rect(134px, auto, 43px, 5px);
-}
-50% {
-  clip: rect(102px, auto, 80px, 5px);
-}
-55% {
-  clip: rect(119px, auto, 44px, 5px);
-}
-60% {
-  clip: rect(106px, auto, 99px, 5px);
-}
-65% {
-  clip: rect(141px, auto, 74px, 5px);
-}
-70% {
-  clip: rect(20px, auto, 78px, 5px);
-}
-75% {
-  clip: rect(133px, auto, 79px, 5px);
-}
-80% {
-  clip: rect(78px, auto, 52px, 5px);
-}
-85% {
-  clip: rect(35px, auto, 39px, 5px);
-}
-90% {
-  clip: rect(67px, auto, 70px, 5px);
-}
-95% {
-  clip: rect(71px, auto, 103px, 5px);
-}
-100% {
-  clip: rect(83px, auto, 40px, 5px);
-}
-}
-.mosaique {
-  margin: 20px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-.mosaique .image-container {
-  display: grid;
-  grid-template-columns: repeat(var(--NB-COLONNES), 1fr);
-  box-sizing: border-box;
-  grid-auto-rows: var(--ROW-HEIGHT);
-  gap: var(--GAP);
-}
-
-.mosaique .image-container img {
-  cursor: pointer;
-}
-
-.image-container>img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.mosaique .image-container .c1-r1 {
- grid-column: 1/8;
- grid-row: 1/4;
-}
-.mosaique .image-container .c2-r1 {
- grid-column: 8/11;
- grid-row: 1/4;
-}
-
-.mosaique .image-container .c3-r1 {
-  grid-column: 11/13;
- grid-row: 1/4;
-}
-
-.mosaique .image-container .c1-r2 {
-  grid-column: 1/4;
- grid-row: 4/6;
-}
-
-.mosaique .image-container .c2-r2 {
-  grid-column: 4/10;
- grid-row: 4/6;
-}
-
-.mosaique .image-container .c3-r2 {
-  grid-column: 10/13;
- grid-row: 4/6;
-}
-
-.mosaique .image-container .c1-r4 {
-  grid-column: 1/13;
- grid-row:6/9;
-}
-
-.mosaique .image-container .c1-r3 {
-  grid-column: 1/5;
- grid-row: 9/11;
-}
-
-.mosaique .image-container .c2-r3 {
-  grid-column: 5/7;
- grid-row: 9/11;
-}
-
-.mosaique .image-container .c3-r3 {
-  grid-column: 7/13;
- grid-row: 9/13;
-}
-
-.mosaique .image-container .c1-r5 {
-  grid-column: 1/3;
- grid-row:11/13;
-}
-.mosaique .image-container .c2-r5 {
-  grid-column: 3/7;
- grid-row:11/13;
-}
-
-/* TAILLE ECRAN BIGO */
-@media screen and (max-width: 460px) {
-
-/*ADAPTATION TAILLE MOSAIQUE*/
-.mosaique .image-container {
-  display: grid;
-  grid-template-columns: repeat(12,2fr);
-  box-sizing: border-box;
-  grid-auto-rows: 100px;
-  gap: 10px;
-}
-
-/*AJOUT D'UNE SIDE BAR POUR LE NAV*/
-}
 
 /*POPUP PAYSAGE*/
 
- .popup-paysage {
-    position: fixed;
-    top: 0; left: 0;
-    background: rgba(0, 0, 0, .9);
-    height: 100%;
-    width: 100%;
-    z-index: 100;
-    display: none;
-}
- 
- .popup-paysage span{
-    position: absolute;
-    top:0; right: 10px;
-    font-size: 60px;
-    font-weight: bolder;
-    color: #fff;
-    cursor: pointer;
-    z-index: 100;
-}
-
- .popup-paysage img {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    width: 900px;
-    height: 600px;
-    object-fit: cover;
-}
-
-.popup-portrait {
+.popup-paysage {
   position: fixed;
   top: 0; left: 0;
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 0.648);
   height: 100%;
   width: 100%;
   z-index: 100;
   display: none;
 }
-.popup-portrait span{
+
+.popup-paysage span{
   position: absolute;
   top:0; right: 10px;
   font-size: 60px;
   font-weight: bolder;
   color: #fff;
   cursor: pointer;
-  z-index: 100; 
+  z-index: 100;
 }
 
- .popup-portrait img {
+.popup-paysage img {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 900px;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+/* POPUP-PAYSAGE */
+.popup-portrait {
+position: fixed;
+top: 0; left: 0;
+background: rgba(0, 0, 0, 0.648);
+height: 100%;
+width: 100%;
+z-index: 100;
+display: none;
+}
+
+.popup-portrait span{
+position: absolute;
+top:0; right: 10px;
+font-size: 60px;
+font-weight: bolder;
+color: #fff;
+cursor: pointer;
+z-index: 100; 
+}
+
+.popup-portrait img {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
+}
+
+
+
+
+/* Responsive layout - on passe de 5 à 4 colonnes pour les screen taille M (style IPad) */
+@media screen and (max-width: 1000px) {
+  
+  .mosaique {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 2em;
+  }
+  
+  .column {
+    -ms-flexbox: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  .column:last-child {
+    display: none;
+  }
+/*  
+  .column:nth-child(5) {
+    display: flex;
+    flex-direction: row wrap;
+    -ms-flexbox:100%;
+    max-width: 100%;
+   }
+
+   .column:nth-child(5) img {
+    margin-top: 8px;
+    padding: 0 4px;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+  } */
+
+  /* REMISE A L'ECHELLE DE L'ECRAN POUR POP-UP PAYSAGE (PAS BESOIN POUR PORTRAIT) */
+  
+  .popup-paysage img {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
-    width: 500px;
-    height: 700px;
+    width: 700px;
+    height: 450px;
     object-fit: cover;
+  }
+
+}
+  
+  /* Responsive layout - on passe de 5 à 3 colonnes pour format bigo taille S 
+  + ajout d'un icone interractif pour le nav 
+  + marge resserrée*/
+@media screen and (max-width: 470px) {
+   
+    .top-header {
+      padding: 0.25rem 0.5rem;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+
+  
+   .prosper-titre {
+    font-size: 25px;
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+    margin-bottom: 1em;
+  
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    position: sticky;
+
+    }
+
+    .mosaique {
+        padding: 0 4px;
+    }
+    
+    .column {
+      -ms-flex: 33%;
+      flex: 33%;
+      max-width: 33%;
+      padding: 0 4px;
+    }
+
+
+    .column:nth-child(4),
+    .column:nth-child(5) {
+      display:flex;
+      flex-direction: column;
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width:50%;
+      
+    }
+
+    .column:nth-child(4) .image-container,
+    .column:nth-child(5) .image-container {
+      padding: 0 4px;
+      margin-top: 8px;
+    }
+
+    .column:nth-child(4) img,
+    .column:nth-child(5) img {
+      padding: 0 4px;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+  
+    }
+   
+    
+
+    /* REMISE A L'ECHELLE DE L'ECRAN POUR POP-UP PAYSAGE  */
+    
+    .popup-paysage img {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* REMISE A L'ECHELLE DE L'ECRAN POUR POP-UP PORTRAIT  */
+      .popup-portrait img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+/* Responsive layout - juste pour modifier format des pop-up paysage & portrait quand écran taille S en mode paysage */
+
+@media screen and (max-width:950px) and (orientation:landscape){
+   
+  
+  /* REMISE A L'ECHELLE DE L'ECRAN POUR POP-UP PAYSAGE  */
+  .popup-paysage {
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.648);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+  }  
+
+   .popup-paysage img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 600px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  /* REMISE A L'ECHELLE DE L'ECRAN POUR POP-UP PORTRAIT  */
+  .popup-portrait {
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.648);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    }
+
+
+    .popup-portrait img {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  width: 250px;
+  height: 325px;
+  object-fit: cover;
+}
+
 }

@@ -5,53 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propser</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" href="gulliverLogo  .png">
 </head>
 
 <body>
 
-    <header>
+<header>
 
-    <h1 class="prosper-titre" data-text="Prosper"> Prosper</h1>
+        <h1 class="prosper-titre" data-text="Prosper"> Prosper</h1>
+    <div class="logo-container">
+        <img src="gulliverLogo  .png" alt="">
+       </div>
 
-      <!--  <h2><button class="prosper-logo"></button></h2> -->
     
-    <nav>
         <ul class="menu">
             <li><a class="text" href="collections.html" data-text=' Collections'> Collections</a></li>
-            <li><a class="text" href="aléatoire.html"  data-text=' Sélection Aléatoire'> Sélection Aléatoire</a></li>
+            <li><a class="text" href="contacts.html"  data-text='Contact'> Contact </a></li>
         </ul>
+   
 </header>
 
-    <main class="mosaique">
-    <div class="image-container">
-        <img class="c1-r1 paysage" src="photos/4600x3600.jpg" alt="" >
-        <img class="c2-r1 portrait"src="photos/2400x3600-a.jpg" alt="" >
-        <img class="c3-r1 portrait" src="photos/2400x3600-c.jpg" alt="" >
-        <img class="c1-r2 portrait"src="photos/2400x3600.jpg" alt="" >
-        <img  class="c2-r2 paysage"src="photos/1908x1272-a.JPG" alt="" >
-        <img class="c3-r2 portrait"src="photos/1272x1908.JPG" alt="" >
-        <img class="c1-r3 paysage" src="photos/1908x1272-b.JPG" alt="" >
-        <img class="c2-r3 portrait"src="photos/2075x3130.JPG" alt="" >
-        <img class="c3-r3 paysage"src="photos/3130x2075.JPG" alt="" >
-        <img  class="c1-r4 paysage" src="photos/1908x1272.JPG" alt="" >
-        <img class="c1-r5 portrait" src="photos/2075x3130-b.JPG" alt="" >
-        <img class="c2-r5 paysage" src="photos/3130x2075-a.JPG" alt="" >
-        <img class="portrait" src="photos/4000x6000.jpg" alt="" >
-        <img  class="portrait" src="photos/1272x1908-b.JPG" alt="">
-        <img  class="paysage"src="photos/5800x2500.jpg" alt="" >
+<div class="mosaique">
+    <!-- Chaque colonne contient 6 images dont 3 portraits et 3 paysages -->
+    <div class="column">
+        <div class="image-container"> <img  src="photos/4600x3600.jpg" alt="" class="paysage"></div>
+        <div class="image-container"> <img src="photos/2400x3600-a.jpg" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/2400x3600.jpg" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/1908x1272-a.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/5492x6638.JPG" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/1908x1272-c.JPG" alt="" class="paysage"></div>
+    </div>
 
+    <div class="column">
+        <div class="image-container"><img src="photos/1908x1272-b.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/2075x3130.JPG" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/3130x2075.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/1312 x 1968.jpg" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/1908x1272.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/2048 x 3091.JPG" alt="" class="portrait"></div>
+    </div>
+
+    <div class="column">
+        <div class="image-container"><img src="photos/2075x3130-b.JPG" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/3130x2075-a.JPG" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/4264x3114.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/826x1034.jpg" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/6000x4000.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/2075 x3130-d.JPG" alt="" class="portrait"></div>
     </div>
 
 
-    <div class="popup-paysage">
-        <span>&times;</span>
-        <img class="c2-r2 paysage" src="photos/1908x1272-a.JPG" alt="" width="1908" height="1272">
-    </div> 
+    <div class="column">
+        <div class="image-container"><img src="photos/6000x4000-b.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/1024 x 1545.jpg" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/1228x1818.JPG" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/6000x4000-c.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/1272-1908-d.jpg" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/3130x2075-c.jpg" alt="" class="paysage"></div>
+    </div>
 
-    <div class="popup-portrait">
-        <span>&times;</span>
-        <img src="photos/2400x3600-a.jpg"  alt="" width="2400" height="3600">
-    </div> 
+    <div class="column">
+        <div class="image-container"><img src="photos/6000x4000-d.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/4000x6000.jpg" alt="" class="portrait"></div>
+        <div class="image-container"><img src="photos/3600x2400.JPG" alt="" class="paysage"></div>
+        <div class="image-container"><img src="photos/1272x1908-c.JPG" alt="" class="portrait"></div>
+          <div class="image-container"><img src="photos/4264x3114-b.JPG" alt="" class="paysage"></div>
+          <div class="image-container"><img src="photos/2075 x 3130-c.JPG" alt="" class="portrait"></div>
+    </div>
+</div>
+
+<div class="popup-paysage">
+    <span>&times;</span>
+    <img class="c2-r2 paysage" src="photos/1908x1272-a.JPG" alt="" width="1908" height="1272">
+</div> 
+
+<div class="popup-portrait">
+    <span>&times;</span>
+    <img src="photos/2400x3600-a.jpg"  alt="" width="2400" height="3600">
+</div> 
+
 
 
 <!-- SCRIPT JS POUR PAYSAGE POPUP -->
@@ -81,18 +113,7 @@
         document.querySelector('.popup-portrait').style.display='none';
     }
 </script>
-   </main>
 
-
-<!--    <footer>
-<h2> <button> Contacts </button></h2>
-<ul>
-    <li> <a href="">Abonnement à Newsletter</a></li>
-    <li> <a href="">Insta</a></li>
-    <li> <a href="">Mail perso</a></li>
-    <li> <a href="">Mail problèmes techniques de la plateforme</a></li>
-</ul>   
-   </footer>
- -->
 </body>
+
 </html>
