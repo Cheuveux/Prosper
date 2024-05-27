@@ -19,14 +19,23 @@
   height: 100%;
   overflow: hidden;
   background-color:var(--HDRBGCOLOR);
+  
+  scroll-behavior: smooth;
 }
 
+
+/* HEADER & NAV */
+
+
 header {
-  height: 8rem;
+  height: 7rem;
+  width:100%;
   margin: 5px;
+  margin-top: 15px;
     
    display: flex;
   flex-flow: row wrap;
+  position: fixed;
 
   border-bottom: dashed  lightgrey;
   
@@ -216,38 +225,42 @@ header {
 
 
 .logo-container {
- position: relative;
+ 
+  position: relative;
+  top: -25px;
   width: auto;
-  height: 8rem;
+  height: 9rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 
 .logo-container img {
- height: 100%;
- width: 100%;
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
   object-fit: fill;
 }
 
-nav {
- height: 300;
- width: 100vh;
- min-width: 600px;
- 
- display: flex;
- align-items: flex-start;
- justify-content: space-between;
- margin: 5%;
- margin-right: solid  lightgrey;
+
+
+/* INDEX COLLECTION */
+
+.indexCollection {
+  position: fixed;
+  left: 25px;
+  margin-top: 8rem;
+ }
+
+
+.indexCollection div {
+  margin: 5px 10px;
+  padding: 5px;
+  margin-top: 95px;
+  position: relative;
 }
 
-
-.sommaire li {
-  margin-top: 50px;
-}
-
-.sommaire a {
+.indexCollection a {
   
   position: relative;
   text-decoration: none;
@@ -257,7 +270,7 @@ nav {
 
 }
 
-.sommaire a:after {
+.indexCollection a:after {
   content: "";
   position:absolute;
   background-color: var(--FONTCOLOR);
@@ -269,11 +282,121 @@ nav {
   transition: 0.3s ease;
 }
 
-.sommaire a:hover {
+.indexCollection a:hover {
   font-weight: 700;
 }
 
-.sommaire a:hover:after {
+.indexCollection a:hover:after {
   width: 100%;
 }
 
+/* COLLECTIONS SPECIF */
+
+.collections {
+  
+  position: relative;
+  left: 300px;
+  margin-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+}
+
+.collections div {
+  margin-top: 2em;
+  margin-bottom: 100vh;
+}
+
+
+.collections h2 {
+  color: var(--FONTCOLOR);
+  margin-top: 6.5em;
+
+  text-align: center;
+  letter-spacing: 3px;
+  font-style: oblique;
+}
+
+
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+ 
+position: relative;
+top: -60px;
+
+  width: 1100px;
+  height: 520px;
+  margin-left: 15%;
+
+
+  object-fit: contain;
+}
+
+.carousel-img {
+  position: absolute;
+  width: 1000px;
+  height: 450px;
+
+  border: dashed var(--FONTCOLOR);
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+ 
+}
+
+.carousel-img> img {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+}
+
+.carousel-slide {
+  position: relative;
+    top: 420px;
+   
+      width: 800px;
+      height: 70px;
+
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-around;
+    object-fit: contain;
+
+   
+
+}
+
+.image {
+ position: relative;
+  width: 100px;
+ height: 90px;
+
+ display: flex;
+ flex-flow: row nowrap;
+ border: dashed var(--FONTCOLOR);
+
+ 
+
+ 
+
+ cursor: pointer;
+
+
+  
+}
+.image > img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
