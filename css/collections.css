@@ -9,9 +9,9 @@
 :root {
   /* GENERAL COLOR */
   --CLRBORDER:rgb(60, 57, 57);
-  --HDRBGCOLOR: #111;
-  --FONTCOLOR:#d51c1c;
-  --CONTENUBG: rgba(33, 33, 33, 0.848);
+  --HDRBGCOLOR: rgb(238, 233, 197);
+  --FONTCOLOR:#111;
+  --CONTENUBG: rgb(238, 233, 197);
 }
 
  html{
@@ -42,19 +42,25 @@ header {
 .titre-container{
 
   height: 2rem;
+  width: auto;
   display: flex;
   justify-content: left;
   align-items: left;
 }
 
 .prosper-titre{
-  text-decoration: none;
+  
   display: flex;
   position: relative;
   color: var(--FONTCOLOR);
+  width: auto;
+  
   font-weight: 700;
+  letter-spacing: 0px;
   font-size: 45px;
   padding: 15px;
+  text-decoration: none;
+  top: -15px;
 
 }
 
@@ -308,14 +314,6 @@ header {
 }
 
 
-.collections h2 {
-  color: var(--FONTCOLOR);
-  margin-top: 4.5em;
-
-  text-align: center;
-  letter-spacing: 3px;
-  font-style: oblique;
-}
 
 
 
@@ -327,12 +325,13 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  top: 30px;
-  margin-left: 8%;
+  margin-top: 10%;
+  margin-left: 10%;
 
 
   object-fit: fill;
 }
+
 
 .carousel-img {
 
@@ -340,20 +339,21 @@ header {
   justify-content: start;
   align-items: start;
 
-  margin: 10px 0 0 10px;
+  margin: 0px 0 0 10px;
   width: auto;
   height: 100%;
 
 }
 
 .carousel-portrait {
-  width:400px;
+  width:750px;
   height: 500px;
   
   display: none;
 
   position: absolute;
   margin: 10px 0 0 200px;
+  object-fit: contain;
 
 }
 
@@ -367,7 +367,7 @@ header {
 }
 
 .carousel-paysage {
-  width:750px ;
+  width:750px;
   height: 500px;
 
   position: absolute;
@@ -385,54 +385,77 @@ header {
 
 }
 
+.fleche {
+  position: absolute;
+   width: 30px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+
+  cursor: pointer;
+
+}
+
+#backBtn {
+   margin: 20% -10px 0px -50px ;
+}
+
+#nextBtn {
+  transform: rotate(180deg);
+  margin: 20% -10px 0px 800px;
+}
+
 
   
 
 .carousel-slide {
   position: absolute; 
-    right: 145px;
-    top: 50px;
-    width: 150px;
-    height: 460px;
+    left: 10%;
+    bottom: -100px;
+    width: 460px;
+    height: 100px;
     border-radius: 5%;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     overflow: hidden;
 
-    background-color: rgba(33, 33, 33, 0.848);
-    overflow-y: scroll;
+    
+    overflow-x: scroll;
     scroll-behavior: smooth;
-   
+    background-color: rgba(242, 216, 166, 0.848);
 }
 
+
+/* Hide scrollbar for Chrome, Safari and Opera */
 .carousel-slide::-webkit-scrollbar {
   display: none;
 }
-#backBtn {
-  width: 40px;
-  height: 50px;
-  margin: 5px 0px 10px 25px;
-  transform: rotate(90deg);
-}
-#nextBtn {
-  width: 40px;
-  height: 50px;
-  margin: 5px 0px 10px 25px;
-  transform: rotate(-90deg);
-}
 
+/* Hide scrollbar for IE, Edge and Firefox */
+.carousel-slide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 
 .carousel-slide .image {
   display: flex;
-  margin: 10px 10px 20px 10px ;
+  margin: 3px 10px 3px 10px ;
   
 
  cursor: pointer;
 }
 
+.image .paysage {
+  width: 150px;
+  height: 100px;
+}
 
+.image .portrait {
+  width: 100px;
+  height: 100px;
+}
 
 
 .image > img{

@@ -6,9 +6,9 @@
 
 :root {
   /* COULEUR */
+  --HDRCOLOR: rgb(238, 233, 197);
   --HDRCOLOR: #111;
-  --HDRCOLOR: #9d0208;
-  --MAINBGCOLOR:#111;
+  --MAINBGCOLOR:rgb(238, 233, 197);
 
 
   /* POLICE */
@@ -33,53 +33,50 @@ html::-webkit-scrollbar {
 
 header {
   position: sticky;
-   width: 100%;
+   width: auto;
    display: flex;
    flex-flow: row wrap;
-   margin: auto;
 }
 
 
 
+.logo-container {
+  position: relative;
+  margin: -30px 0px 0px 15px;
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+
+  object-fit: cover;
+
+}
+
+.logo-container img {
+height: 100%;
+width: 100%;
+}
+
+
 
 .prosper-titre {
-  font-size: 3rem;
-  margin-top: 0.5em;
+  font-size: 4rem;
+  margin-top: 1em;
   margin-left: 0.5em;
-  margin-bottom: 0;
 
   display: flex;
   justify-content: left;
   align-items: left;
 
-
-
   position: sticky;
    color: var(--HDRCOLOR);
+  
 }
 
-
-.logo-container {
-    position: relative;
-    left: 15px;
-    bottom: 10px;
-    width: auto;
-    height: 8.5rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-.logo-container img {
- height: 100%;
- width: 100%;
-  object-fit: fill;
-}
 
 
 
   .menu  {
-    bottom: 0px;
+    margin: -45px 0px  0px  0px;
     
     width: 100%;
     height: 100%;
@@ -105,7 +102,7 @@ header {
     display: flex;
 
     color: var(--HDRCOLOR);
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -113,7 +110,7 @@ header {
 .menu .text::after {
   padding: 5px;
   color: var(--HDRCOLOR);
-  font-weight: 700;
+  font-weight: 500;
 
   content: attr(data-text);
   position: absolute;
@@ -129,14 +126,16 @@ header {
 
 .menu .text:hover:before{
   display: inline;
-  left: 5px;
-  text-shadow: -2px;
+  font-weight: 700;
+  left: 15px;
+  text-shadow: -2px 0 green;
   animation: glitch-1 2s infinite reverse;
 }
 
 .menu .text:hover::after{
   display: inline;
-  left: -5px;
+  font-weight: 800;
+  left: -15px;
   text-shadow: -2px 0 green;
   animation: glitch-2 2s linear infinite reverse;
 
